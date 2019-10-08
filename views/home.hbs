@@ -1,32 +1,40 @@
+{{#each  error}}
+    <div class="alert alert-danger alert-dismissible fade show mt-2"  role="alert">
+        {{text}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{{/each}}
 <div class="row">
     <div class="col-6 d-flex align-items-center justify-content-center" style="background: #FFFfff;color:#000000; height: 800px;">
         <div>
-            <h1 class="login mb-3" style="font-weight:bold;">LOGIN</h1> 
-            <form>
+            <h1 class="login mb-4" style="font-weight:bold;">LOGIN</h1>         
+            <form> 
                 <div class="form-group">
-                    <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">                            
+                    <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email" style="font-size: 20px;">                            
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="font-size: 20px;">
                 </div>
-                <button type="submit" class="btn" id="loginBtn" style="background: #000000;color:#FFFfff;">Submit</button>
+                <button type="submit" class="btn" id="loginBtn" style="background: #000000;color:#FFFfff; font-size:20px">Submit</button>
             </form>
         </div>  
     </div>
     <div class="col-6 d-flex align-items-center justify-content-center" style="background:#01DFA5;color:#000000; height: 800px">
         <div>
-            <h1 class="sign-up mb-3" style="font-weight:bold;">SIGN UP</h1>
-            <form>
+            <h1 class="sign-up mb-4" style="font-weight:bold;">SIGN UP</h1>
+            <form action="/" method="POST">
                 <div class="form-group">
-                    <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter email">                            
+                    <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email" value="{{email}}" style="font-size: 20px;">                            
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password" value="{{password}}" style="font-size: 20px;">
                 </div>
                 <div class="form-group">
-                    <input type="phone" class="form-control" id="signUpPhone" placeholder="Phone">
+                    <input type="password" class="form-control" name="confirm_passsword"  placeholder="Confirm Password" value="{{confirm_password}}" style="font-size: 20px;">
                 </div>
-                <button type="submit" class="btn" id="singUpBtn" style="background: #000000;color:#FFFfff;">Submit</button>
+                <button type="submit" class="btn" id="singUpBtn" style="background: #000000;color:#FFFfff; font-size:20px;">Submit</button>
             </form>
         </div>            
     </div>

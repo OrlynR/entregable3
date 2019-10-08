@@ -1,0 +1,85 @@
+{{#each  error}}
+    <div class="alert alert-danger alert-dismissible fade show mt-2"  role="alert">
+        {{text}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{{/each}}
+<div class="row">
+    <div class="col-md-4 mx-auto d-flex align-items-center justify-content-center"
+        style="background: #FFFfff;color:#000000; height: 1100px;">
+        <div class="card" style="border:1px solid #000;">
+            <div class="card-header" style="border-bottom:1px solid #000;">
+                <h2>New Movie</h2>
+            </div>
+            <div class="card-body">
+                <form action="/movies/new-movie" method="POST" enctype="multipart/form-data">
+                     <div class="form-group">
+                         <h6>Video</h6>
+                        <input type="file" name="video" class="form-control" accept="video/mp4, video/x-m4v, video/*">
+                    </div>
+                    <div class="form-group">
+                        <h6>Category</h6>
+                        <select type="text" name="category" class="mdb-select md-form form-control" placeholder="Category">
+                            {{#each category as |category|}}
+                                <option>{{category}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h6>Type</h6>
+                        <select type="text" name="type" class="mdb-select md-form form-control" placeholder="Type">
+                            {{#each type as |type|}}
+                                <option>{{type}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h6>Title</h6>
+                        <input type="text" name="title" class="form-control" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                        <h6>Director</h6>
+                        <input type="text" name="director" class="form-control" placeholder="Director">
+                    </div>
+                    <div class="form-group">
+                        <h6>Year</h6>
+                        <input type="number" name="year" min="1900" max="2020" step="1" value="2019" class="form-control" placeholder="Year">
+                    </div>
+                    <div class="form-group">
+                        <h6>Time</h6>
+                        <input type="time" name="time" min="0:00" max="04:00" class="form-control" placeholder="Time">
+                    </div>
+                    <div class="form-group">
+                        <h6>Language</h6>
+                        <select type="text" name="language" class="mdb-multiselect md-form form-control" placeholder="Language">
+                            {{#each language as |language|}}
+                                <option>{{language}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h6>Subtitle</h6>
+                        <select type="text" name="subtitle" class="mdb-select md-form form-control" placeholder="Subtitle">
+                            {{#each subtitle as |subtitle|}}
+                                <option>{{subtitle}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h6>Dubbing</h6>
+                        <select type="text" name="dubbing" class="mdb-select md-form form-control" placeholder="Dubbing">
+                            {{#each dubbing as |dubbing|}}
+                                <option>{{dubbing}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-dark btn-block">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
