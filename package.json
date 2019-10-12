@@ -2,7 +2,7 @@
   "name": "store",
   "version": "1.0.0",
   "description": "",
-  "enginers":{
+  "engines":{
     "node":"v10.16.3"
   },
   "main": "index.js",
